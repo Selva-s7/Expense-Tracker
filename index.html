@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpenseTracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="Heading">
+        <h1>EXPENSE TRACKER</h1>
+    </nav>
+    <section class="AddSection">
+        <form action="#" class="addToList">
+            <table>
+                <tr>
+                    <td><label for="username">NAME:</label></td>
+                    <td><input type="text" required id="username"></td>
+                </tr>
+                <tr>
+                    <td><label for="amount">AMOUNT:</label></td>
+                    <td><input type="number" id="amount" required></td>
+                </tr>
+                <tr>
+                    <td><label for="category">CATEGORY:</label></td>
+                    <td><select name="categories" id="category">
+                    <option value="FOOD">Food</option>
+                    <option value="TRANSPORT">Transport</option>
+                    <option value="SHOPPING">Shopping</option>
+                    <option value="BILLS">Bills</option>
+                    <option value="OTHER">Other</option>
+           </select>
+        </td>
+                </tr>
+            </table>
+        <div class="btndiv">
+            <button type="submit" class="addbtn">ADD</button>
+        </div>
+    </form>
+</section>
+<section class="expense_section">
+    <div class="show_me">
+        <button type="button" class="show_me_btn">VIEW TOTAL SPENT
+        </button>
+    </div>
+    <p class="disp_exp"></p>
+</section>
+<div class="expense_list_section">
+    <ol class="Expense-list">EXPENSES
+       
+    </ol>
+</div>
+<section class="Chart_section">
+    <button class="viewchart" type="button">VIEW CHART</button>
+   <canvas id="myChart"></canvas>
+</section>
+<script src="main.js"></script>
+</body>
+</html>

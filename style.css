@@ -1,0 +1,126 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background: linear-gradient(135deg,#0dc64edf ,#0eddc5 );
+}
+.Heading
+{
+    color:white;
+    background-color: black;
+    top:0;
+    position: sticky;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem;
+}
+.AddSection
+{
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+    min-height: 100vh;
+   
+}
+.AddSection .addToList 
+{
+    min-height: 200px;
+    border-radius: 12px;
+    background-color:transparent;
+}
+.AddSection .addToList table
+{
+    padding-top: 1rem;
+   
+}
+.AddSection .addToList .btndiv
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.AddSection .addToList .btndiv .addbtn
+{
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    border: 1px solid red;
+    transition: color 0.5s ease ,background-color 0.5s ease ,border 0.5s ease;
+
+}
+.AddSection .addToList .btndiv .addbtn:hover
+{
+  color:rgba(13, 224, 13, 0.932);
+  background-color:rgba(0,0,0,0.8);
+  border: 1px solid green;
+
+}
+.expense_section .show_me
+{
+    display: flex;
+    justify-content: center;
+}
+.expense_section .show_me .show_me_btn
+{
+ padding: 0.5rem;
+    border-radius: 15px;
+    border: 1px solid red;
+    transition: color 0.5s ease ,background-color 0.5s ease ,border 0.5s ease;   
+}
+.expense_section .show_me .show_me_btn:hover
+{
+    color:rgba(13, 224, 13, 0.932);
+  background-color:rgba(0,0,0,0.8);
+  border: 1px solid green;
+}
+.Chart_section
+{
+    text-align: center;
+    padding: 1rem;
+}
+.expense_list_section
+{
+
+    text-align: center;
+    background-color: black;
+    color:rgb(14, 212, 14);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 10px;
+   
+}
+.format
+{
+    list-style: none;
+}
+.disp_exp
+{
+    text-align: center;
+    font-size: 800;
+    
+}
+.Chart_section  .viewchart
+{
+    padding: 0.5rem;
+    border-radius: 15px;
+    border: 1px solid red;
+    transition: color 0.5s ease ,background-color 0.5s ease ,border 0.5s ease;
+}
+.Chart_section .viewchart:hover
+{
+   color:rgba(13, 224, 13, 0.932);
+  background-color:rgba(0,0,0,0.8);
+  border: 1px solid green;
+}
+#mychart
+{
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+}
