@@ -58,6 +58,7 @@ Form.addEventListener("submit",(e)=>{
     localStorage.setItem(`entry${count}`,JSON.stringify(exp_detail));
     count++;
    localStorage.setItem("itemno",count);
+   seeChart();
   
 });
 function renderExpense()
@@ -95,7 +96,7 @@ function renderExpense()
        localStorage.removeItem(`entry${details.id}`);
        expense-=details.amount;
        localStorage.setItem("expense",expense);
-      
+      seeChart();
 
     })
     rlis.appendChild(xbtn);
@@ -118,8 +119,9 @@ const chartdata={
     SHOPPING:0,
     BILLS:0,
     OTHER:0,
-}
-viewchart.addEventListener("click",()=>
+};
+
+function seeChart()
 {
     const noofItems=parseInt(localStorage.getItem("itemno"));
      Object.keys(chartdata).forEach(key => chartdata[key] = 0);
@@ -149,5 +151,6 @@ viewchart.addEventListener("click",()=>
         
     }
 );
-})
+}
+viewchart.addEventListener("click",seeChart);
 // DONE ALL  FINISHED
