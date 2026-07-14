@@ -47,7 +47,7 @@ Form.addEventListener("submit",(e)=>{
        localStorage.removeItem(`entry${exp_detail.id}`);
        expense-=exp_detail.amount;
        localStorage.setItem("expense",expense);
-      
+      showExpense()
        
     })
     lis.appendChild(xbtn);
@@ -57,6 +57,7 @@ Form.addEventListener("submit",(e)=>{
     localStorage.setItem("expense",expense);
     localStorage.setItem(`entry${count}`,JSON.stringify(exp_detail));
     count++;
+    showExpense();
    localStorage.setItem("itemno",count);
    seeChart();
   
@@ -105,14 +106,14 @@ function renderExpense()
     }
 }
 renderExpense();
-viewBtn.addEventListener("click",()=>
+function showExpense()
 {
     const p=document.querySelector(".disp_exp");
   
    p.textContent=`EXPENSE IS:${localStorage.getItem("expense")}`;
 
 }
-)
+viewBtn.addEventListener("click",showExpense);
 const chartdata={
     FOOD:0,
     TRANSPORT:0,

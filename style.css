@@ -120,7 +120,17 @@ body
 }
 #mychart
 {
-    max-width: 400px;
+    max-width: 300px;
     margin: 0 auto;
     display: block;
+}
+@media (max-width:768px)
+{
+   
+    #mychart
+    {
+        max-width: 200px;
+    
+    }
+
 }
