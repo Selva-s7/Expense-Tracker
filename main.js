@@ -10,6 +10,9 @@ Form.addEventListener("submit",(e)=>{
     let uname=document.querySelector("#username").value;
     let Am=parseFloat(document.querySelector("#amount").value);
     let cat=document.querySelector("#category").value;
+    uname.value=" ";
+    Am.value=" ";
+    cat.value=" ";
    // let expenseDetail=localStorage.getItem(`entry${count}`)||0;
     
     const exp_detail={
@@ -98,6 +101,7 @@ function renderExpense()
        expense-=details.amount;
        localStorage.setItem("expense",expense);
       seeChart();
+      showExpense();
 
     })
     rlis.appendChild(xbtn);
