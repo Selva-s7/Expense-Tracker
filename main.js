@@ -4,7 +4,7 @@ const Form=document.querySelector(".addToList");
 const olist=document.querySelector(".Expense-list");
 const viewchart=document.querySelector(".viewchart");
 let count=parseFloat(localStorage.getItem("itemno"))||1;
-    let expense=parseFloat(localStorage.getItem("expense"))||0;
+let expense=parseFloat(localStorage.getItem("expense"))??0;
 Form.addEventListener("submit",(e)=>{
     e.preventDefault();
     let uname=document.querySelector("#username").value;
@@ -48,7 +48,8 @@ Form.addEventListener("submit",(e)=>{
        localStorage.removeItem(`entry${exp_detail.id}`);
        expense-=exp_detail.amount;
        localStorage.setItem("expense",expense);
-      showExpense()
+      showExpense();
+       seeChart();
        
     })
     lis.appendChild(xbtn);
