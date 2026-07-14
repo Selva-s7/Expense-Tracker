@@ -10,9 +10,7 @@ Form.addEventListener("submit",(e)=>{
     let uname=document.querySelector("#username").value;
     let Am=parseFloat(document.querySelector("#amount").value);
     let cat=document.querySelector("#category").value;
-    uname.value=" ";
-    Am.value=" ";
-    cat.value=" ";
+  
    // let expenseDetail=localStorage.getItem(`entry${count}`)||0;
     
     const exp_detail={
@@ -59,6 +57,9 @@ Form.addEventListener("submit",(e)=>{
     expense+=Am;
     localStorage.setItem("expense",expense);
     localStorage.setItem(`entry${count}`,JSON.stringify(exp_detail));
+    document.querySelector("#username").value="";
+    document.querySelector("#amount").value="";
+   document.querySelector("#category").value="";
     count++;
     showExpense();
    localStorage.setItem("itemno",count);
